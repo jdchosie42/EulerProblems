@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace EulerProblems
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
+            Problem1.Problem1Answer();
         }
     }
 }
