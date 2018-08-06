@@ -8,7 +8,7 @@ namespace EulerProblems
 {
     public static class Problem2
     {
-        /* NOT SOLVED
+        /* SOLVED
          * 
          * Problem: By considering the terms in
          * the Fibonacci sequence whose values do not exceed 
@@ -22,18 +22,44 @@ namespace EulerProblems
 
         public static void Problem2Answer()
         {
-            /* Testing to make sure fibonacci sequence works
-            Console.Write("Enter nth value of Fibonacci sequence: ");
-            if(int.TryParse(Console.ReadLine(), out int input))
+            /* 
+             * Different method. Helps to eliminate repeat calculations by only
+             * finding every 3rd value of fib series.
+             */
+
+            int limit = 4000000;
+            int answer = 0;
+            int a = 1;
+            int b = 1;
+            int c = a + b;
+
+            while (c < limit)
             {
-                Console.WriteLine("Euler Problem 2 Answer: " + Fib(input));
-                Console.WriteLine("Press any key to exit.");
-                Console.ReadLine();
+                answer += c;
+                a = b + c;
+                b = c + a;
+                c = a + b;
             }
-            else
+            /**/
+           /* int answer = 0;
+            for(int i = 0;; i++)
             {
-                Console.WriteLine("Input is not a number. Please Enter a number.");
+                int val = Fib(i);
+                if(val < 4000000)
+                {
+                    if(val % 2 == 0)
+                    {
+                        answer += val;
+                    }
+                }
+                else
+                {
+                    break;
+                }
             }*/
+            Console.WriteLine("Euler Problem 2 Answer: " + answer);
+            Console.Write("Press ENTER to continue.");
+            Console.ReadLine();
         }
     }
 }

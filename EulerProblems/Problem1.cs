@@ -37,7 +37,7 @@ namespace EulerProblems
         public static void Problem1Answer()
         {
             Console.WriteLine("Euler Problem 1 Answer: " + (SumDivisible(3) + SumDivisible(5) - SumDivisible(15)));
-            Console.WriteLine("Press ENTER to continue.");
+            Console.Write("Press ENTER to continue.");
             Console.ReadLine();
         }
     }
