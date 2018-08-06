@@ -22,6 +22,7 @@ namespace EulerProblems
 
         public static void Problem2Answer()
         {
+            /* Testing to make sure fibonacci sequence works
             Console.Write("Enter nth value of Fibonacci sequence: ");
             if(int.TryParse(Console.ReadLine(), out int input))
             {
@@ -32,7 +33,7 @@ namespace EulerProblems
             else
             {
                 Console.WriteLine("Input is not a number. Please Enter a number.");
-            }
+            }*/
         }
     }
 }
