@@ -15,13 +15,11 @@ namespace EulerProblems
         public static void Problem3Answer()
         {
             var bigNum = 600851475143;
-            var primeFactor = 0;
             for (var i = 2; i * i < bigNum; i++)
             {
                 if (bigNum % i == 0 && EulerHelper.IsPrime(i))
                 {
                     bigNum /= i;
-                    primeFactor = i;
                 }
             }
 
