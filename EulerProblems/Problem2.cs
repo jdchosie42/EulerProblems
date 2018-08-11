@@ -17,7 +17,7 @@ namespace EulerProblems
 
         public static int Fib(int n)
         {
-            return Fibonacci.nthValue(n);
+            return EulerHelper.FibNthValue(n);
         }
 
         public static void Problem2Answer()
@@ -40,7 +40,6 @@ namespace EulerProblems
                 b = c + a;
                 c = a + b;
             }
-            /**/
            /* int answer = 0;
             for(int i = 0;; i++)
             {
