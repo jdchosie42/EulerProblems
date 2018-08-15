@@ -9,22 +9,25 @@ namespace EulerProblems
     public static class Problem4
     {
         /*
-         * NOT SOLVED
+         * SOLVED
          * Problem: Find the largest palindrome made from the product of two 3-digit numbers.
          */
         public static void ProblemAnswer()
         {
-            /*Brute force method*/
+            /*Better than a brute force method*/
             int largestPalindrome = 0;
 
-            for (int x = 100; x <= 999; x++)
+            for (int x = 999; x >= 100; x--)
             {
-                for (int y = 100; y <= 999; y++)
+                for (int y = 999; y >= x; y--)
                 {
-                    if (EulerHelper.IsPalindrome(x * y) && x * y > largestPalindrome)
-                    {
-                        largestPalindrome = x * y;
-                    }
+                    int product = x * y;
+
+                    if (product <= largestPalindrome)
+                        break;
+
+                    if (EulerHelper.IsPalindrome(product))
+                        largestPalindrome = product;
                 }
             }
 

@@ -10,7 +10,7 @@ namespace EulerProblems
     {
         static void Main(string[] args)
         {
-            Problem3.Problem3Answer();
+            Problem4.ProblemAnswer();
         }
     }
 }
