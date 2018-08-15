@@ -36,6 +36,13 @@ namespace EulerProblems
                 return false;
         }
 
+        /*Returns true if the number is a palindrome*/
+        public static bool IsPalindrome(int num)
+        {
+            return num == Reverse(num);
+        }
+
+        /*Checks to see if a number is prime.*/
         public static bool IsPrime(int num)
         {
             if(num < 2)
@@ -60,6 +67,18 @@ namespace EulerProblems
             }
 
             return true;
+        }
+
+        /*Reverses the order of values in an int*/
+        public static int Reverse(int num)
+        {
+            int reversed = 0;
+            while(num > 0)
+            {
+                reversed = 10 * reversed + (num % 10);
+                num /= 10;
+            }
+            return reversed;
         }
     }
 }

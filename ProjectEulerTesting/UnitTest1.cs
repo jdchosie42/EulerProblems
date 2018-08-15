@@ -8,7 +8,28 @@ namespace ProjectEulerTesting
     [TestClass]
     public class UnitTest1
     {
-        /* These methods were used to make sure the Fibonacci sequence was working correctly.*/
+        /*Problem 4 Tests*/
+        [TestMethod]
+        public void ReverseTest()
+        {
+            var testResult = EulerHelper.Reverse(5678);
+            Assert.AreEqual(8765, testResult, "The reversal wasn't successful.");
+        }
+        [TestMethod]
+        public void PalindromeTest()
+        {
+            var testResult = EulerHelper.IsPalindrome(1001);
+            Assert.AreEqual(true, testResult, "This should be true.");
+        }
+
+        [TestMethod]
+        public void PalindromeTest2()
+        {
+            var testResult = EulerHelper.IsPalindrome(456);
+            Assert.AreEqual(false, testResult, "This should be false.");
+        }
+        
+        /* These methods were used to make sure the Fibonacci sequence was working correctly.
         [TestMethod]
         public void TestMethod1()
         {
@@ -28,6 +49,6 @@ namespace ProjectEulerTesting
         {
             var testResult = Problem2.Fib(7);
             Assert.AreEqual(13, testResult, "This doesn't return 13.");
-        }
+        }*/
     }
 }
