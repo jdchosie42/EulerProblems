@@ -12,7 +12,7 @@ namespace EulerProblems
          * SOLVED
          * Problem: What is the largest prime factor of the number 600851475143?
          */
-        public static void Problem3Answer()
+        public static void ProblemAnswer()
         {
             var bigNum = 600851475143;
             for (var i = 2; i * i < bigNum; i++)

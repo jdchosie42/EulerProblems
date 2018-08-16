@@ -34,7 +34,7 @@ namespace EulerProblems
             return n * (p * (p + 1)) / 2;
         }
 
-        public static void Problem1Answer()
+        public static void ProblemAnswer()
         {
             Console.WriteLine("Euler Problem 1 Answer: " + (SumDivisible(3) + SumDivisible(5) - SumDivisible(15)));
             Console.Write("Press ENTER to continue.");

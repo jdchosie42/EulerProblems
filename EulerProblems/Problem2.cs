@@ -20,7 +20,7 @@ namespace EulerProblems
             return EulerHelper.FibNthValue(n);
         }
 
-        public static void Problem2Answer()
+        public static void ProblemAnswer()
         {
             /* 
              * Different method. Helps to eliminate repeat calculations by only
